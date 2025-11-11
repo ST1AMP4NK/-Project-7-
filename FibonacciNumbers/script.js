@@ -26,3 +26,22 @@ function showNextFibonacci() {
 }
 
 button.addEventListener('click', showNextFibonacci);
+const piString = "3.1415926535897932384626433832795";
+
+let piIndex = 1;
+
+const piDisplay = document.getElementById('pi-display');
+const piButton = document.getElementById('next-pi-btn');
+
+function showNextPiDigit() {
+    if (piIndex <= piString.length) {
+        const piSubstring = piString.substring(0, piIndex);
+        piDisplay.textContent = piSubstring;
+        piIndex++;
+    } else {
+        piIndex = 1;
+        piDisplay.textContent = "...";
+    }
+}
+
+piButton.addEventListener('click', showNextPiDigit);
