@@ -1,5 +1,3 @@
-// 1. Оголошуємо "генератор" - функцію, що може призупиняти своє виконання
-
 function* fibonacciGenerator() {
     let current = 0;
     let next = 1;
